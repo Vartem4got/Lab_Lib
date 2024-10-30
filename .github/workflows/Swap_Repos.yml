@@ -21,8 +21,16 @@ jobs:
         run: |
           git config --global user.name Vartem4got
           git config --global user.email artwitch3000@gmail.com
-      
+          
 
+      - name: Setup GitHub authentication
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global credential.helper store
+          echo "https://Vartem4got:${{ secrets.GITHUB_TOKEN }}@github.com" > ~/.git-credentials
+
+      
       - name: Import lab1 to Lib_Lab_for_lab1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
