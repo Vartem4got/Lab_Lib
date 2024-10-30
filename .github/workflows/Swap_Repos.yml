@@ -14,14 +14,18 @@ jobs:
           repository: Vartem4got/Lab_Lib
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: main
+          persist-credentials: false
+
 
       - name: Configure Git user
         run: |
-          git config --global user.name "Your Name"
-          git config --global user.email "your.email@example.com"
+          git config --global user.name Vartem4got
+          git config --global user.email artwitch3000@gmail.com
       
 
       - name: Import lab1 to Lib_Lab_for_lab1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git remote add lab1 https://github.com/Vartem4got/lab1.git
           git fetch lab1
@@ -30,6 +34,8 @@ jobs:
           git push origin lab1
 
       - name: Import lab2 to Lib_Lab_for_lab2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git remote add lab2 https://github.com/Vartem4got/lab2.git
           git fetch lab2
@@ -38,6 +44,8 @@ jobs:
           git push origin lab2
 
       - name: Import lab3 to Lib_Lab_for_lab3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git remote add lab3 https://github.com/Vartem4got/lab3.git
           git fetch lab3
@@ -46,6 +54,8 @@ jobs:
           git push origin lab3
 
       - name: Import lab4 to Lib_Lab_for_lab4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git remote add lab4 https://github.com/Vartem4got/lab4.git
           git fetch lab4
@@ -54,6 +64,8 @@ jobs:
           git push origin lab4
 
       - name: Import lab5 to Lib_Lab_for_lab5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git remote add lab5 https://github.com/Vartem4got/lab5.git
           git fetch lab5
@@ -62,6 +74,8 @@ jobs:
           git push origin lab5
 
       - name: Import lab6 to Lib_Lab_for_lab6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git remote add lab6 https://github.com/Vartem4got/lab6.git
           git fetch lab6
