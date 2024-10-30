@@ -15,6 +15,12 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           ref: main
 
+      - name: Configure Git user
+        run: |
+          git config --global user.name "Your Name"
+          git config --global user.email "your.email@example.com"
+      
+
       - name: Import lab1 to Lib_Lab_for_lab1
         run: |
           git remote add lab1 https://github.com/Vartem4got/lab1.git
