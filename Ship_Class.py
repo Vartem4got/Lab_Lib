@@ -44,7 +44,7 @@ class Ship:
 def main():
 
     ship1 = Ship("Titanic", 46000, 2400)
-    ship2 = Ship("Queen Mary 2", 76000, 2700)
+    ship2 = Ship("Queen Mary", 76000, 2700)
     ship3 = Ship()
 
 
@@ -57,7 +57,7 @@ def main():
     print(f"Ship 2 mass: {ship2.get_mass()}")
     print(f"Ship 3 pasngrs: {ship3.get_pasngrs()}")
     '''
-        # я манав цей дебаг, якщо знову буде помилка при переносі з studio в code я просто впаду
+        # i hate debug, if it goes wrong agan i dknow what to do
     '''
     ship3.set_name("New Ship")
     ship3.set_mass(50000)
@@ -65,6 +65,9 @@ def main():
     '''
 
     print(ship3)
+    
+    
+    
 
 if __name__ == "__main__":
     main()
