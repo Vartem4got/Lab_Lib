@@ -1,2 +1,0 @@
-animal = " Axolotl"
-print(animal)
